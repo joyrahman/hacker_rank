@@ -16,15 +16,24 @@ def main():
         array.append(int(input()))
         t -= 1
 
-    for N in array:
+    for item in array:
         result = 1
-        while N:
-            if not N % 2:
-                result = spring(result)
+        # while item:
+        #     print("{}:{}>>".format(item, result))
+        #     if (item % 2 == 1):
+        #         result += result
+        #     else:
+        #         result += 1
+        #
+        #     item -= 1
+        #     #print("<<{}:{}".format(item, result))
+        for i in range(0,item):
+            if i%2==0:
+                result *= 2
             else:
-                result = summer(result)
+                result += 1
+            #print("{}:{}>>".format(i, result))
 
-            N -= 1
         print (result)
 
 
