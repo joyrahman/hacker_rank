@@ -1,3 +1,4 @@
+package Simple_Array;
 import java.io.*;
 import java.io.BufferedReader;
 import java.lang.Integer;
