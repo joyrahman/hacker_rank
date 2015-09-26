@@ -1,4 +1,5 @@
-package simpleArray;
+package bigSum;
+
 import java.lang.Integer;
 import java.lang.System;
 import java.util.Scanner;
@@ -14,12 +15,12 @@ public class Solution {
         */
 
         Scanner scanIn = null;
-        int sum = 0;
+        long sum = 0;
 
         try {
             scanIn = new Scanner(System.in);
             int no_of_elements = Integer.parseInt(scanIn.nextLine());
-            int numbers[] = new int[no_of_elements];
+            long numbers[] = new long[no_of_elements];
             for (int i =0; i<no_of_elements; i++)
             {
                 numbers[i] = scanIn.nextInt();
