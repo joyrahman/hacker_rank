@@ -1,10 +1,13 @@
 package happyNumber;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class Solution {
     public boolean isHappy(int n) {
+		Set<Integer> seenList = new HashSet<Integer>();
     	boolean result = false;
     	int sum = n;
     	
@@ -13,14 +16,19 @@ public class Solution {
     	
     	while (sum!=1)
     	{
-    		int newsum = 0;
+			Integer newsum = 0;
     		for(Integer x: getDigit(sum))
     		{
     			//System.out.println(x)
     			newsum += x*x;
     		}
     		//System.out.println(newsum);
-    		
+			if (seenList.contains(newsum)) {
+				result = false;
+				break;
+			} else {
+				seenList.add(newsum);
+			}
     		if (newsum==1)
     		{
     			result = true;
